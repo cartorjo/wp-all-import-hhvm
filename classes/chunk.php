@@ -91,7 +91,7 @@ class PMXI_Chunk {
     {
       if (function_exists('stream_filter_register') and $this->options['filter']){
         stream_filter_register('preprocessxml', 'preprocessXml_filter');
-        $path = 'php://filter/read=preprocessxml/resource=' . $this->file;   
+        $path = $this->file;   
       }
       else $path = $this->file;
 
@@ -107,7 +107,7 @@ class PMXI_Chunk {
     {      
       if (function_exists('stream_filter_register') and $this->options['filter']){
         stream_filter_register('preprocessxml', 'preprocessXml_filter');
-        $path = 'php://filter/read=preprocessxml/resource=' . $this->file;   
+        $path = $this->file;   
       }
       else $path = $this->file;
 
@@ -154,7 +154,7 @@ class PMXI_Chunk {
 
     if (function_exists('stream_filter_register') and $this->options['filter']){
       stream_filter_register('preprocessxml', 'preprocessXml_filter');
-      $path = 'php://filter/read=preprocessxml/resource=' . $this->file;        
+      $path = $this->file;        
     }
     else $path = $this->file;
 
